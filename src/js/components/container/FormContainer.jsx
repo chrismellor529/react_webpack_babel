@@ -11,7 +11,7 @@ class FormContainer extends Component{
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange(event) {
-            this.setState({ [event.target.id]: event.target.valueOf });
+            this.setState({ [event.target.id]: event.target.value });
     }
     render() {
             const {seo_title} = this.state;
