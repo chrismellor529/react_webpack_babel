@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input.jsx";
 import Clock from "../presentational/Clock.jsx";
+import Toggle from "../presentational/Toggle.jsx";
 class FormContainer extends Component{
         constructor() {
             super();
@@ -28,6 +29,7 @@ class FormContainer extends Component{
                         />
                 </form>
                 <Clock />
+                <Toggle />
             </div>
         );
     }
