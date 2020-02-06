@@ -16,6 +16,7 @@ class  LoginControl extends React.Component{
     }
     render() {
         const isLoggedIn = this.state.isLoggedIn;
+        const numbers = [1,2,3,4,5];
         let button;
 
         if(isLoggedIn){
@@ -27,6 +28,7 @@ class  LoginControl extends React.Component{
             <div>
                 <Greeting isLoggedIn={isLoggedIn} />
                 {button}
+                <NumberList numbers={numbers}/>
             </div>
         );
     }
@@ -59,6 +61,13 @@ const UserGreeting = props => {
 const GuestGreeting = props => {
     return <h1>Please sign up.</h1>;
 }
-
-
+const NumberList = props => {
+    const numbers = props.numbers;
+    const listitems = numbers.map((number) =>
+        <li key={number.toString()}>{number}</li>
+    )
+    return(
+        <ul>{listitems}</ul>
+    )
+}
 export default LoginControl;
