@@ -6,6 +6,7 @@ import Toggle from "../presentational/Toggle.jsx";
 import LoginControl from "../presentational/LoginControl.jsx";
 import NameForm from "../presentational/NameForm.jsx";
 import EssayForm from "../presentational/EssayForm.jsx";
+import FlavorFrom from "../presentational/FlavorFrom.jsx";
 class FormContainer extends Component{
         constructor() {
             super();
@@ -36,6 +37,7 @@ class FormContainer extends Component{
                 <LoginControl />
                 <NameForm/>
                 <EssayForm/>
+                <FlavorFrom />
             </div>
         );
     }
