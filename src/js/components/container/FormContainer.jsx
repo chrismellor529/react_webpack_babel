@@ -7,6 +7,7 @@ import LoginControl from "../presentational/LoginControl.jsx";
 import NameForm from "../presentational/NameForm.jsx";
 import EssayForm from "../presentational/EssayForm.jsx";
 import FlavorFrom from "../presentational/FlavorFrom.jsx";
+import Reservation from "../presentational/Reservation.jsx";
 class FormContainer extends Component{
         constructor() {
             super();
@@ -22,6 +23,7 @@ class FormContainer extends Component{
             const {seo_title} = this.state;
         return (
             <div>
+
                 <form id="article-form">
                     <Input
                         text="SEO title"
@@ -38,6 +40,7 @@ class FormContainer extends Component{
                 <NameForm/>
                 <EssayForm/>
                 <FlavorFrom />
+                <Reservation />
             </div>
         );
     }
