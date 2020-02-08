@@ -8,6 +8,7 @@ import NameForm from "../presentational/NameForm.jsx";
 import EssayForm from "../presentational/EssayForm.jsx";
 import FlavorFrom from "../presentational/FlavorFrom.jsx";
 import Reservation from "../presentational/Reservation.jsx";
+import Calculator from "../presentational/Calculator.jsx";
 class FormContainer extends Component{
         constructor() {
             super();
@@ -22,25 +23,30 @@ class FormContainer extends Component{
     render() {
             const {seo_title} = this.state;
         return (
-            <div>
-
-                <form id="article-form">
-                    <Input
-                        text="SEO title"
-                        label="seo_title"
-                        type="text"
-                        id="seo_title"
-                        value={seo_title}
-                        handleChange={this.handleChange}
+            <div className="row">
+                <div className="col-md-6">
+                    <form id="article-form">
+                        <Input
+                            text="SEO title"
+                            label="seo_title"
+                            type="text"
+                            id="seo_title"
+                            value={seo_title}
+                            handleChange={this.handleChange}
                         />
-                </form>
-                <Clock />
-                <Toggle />
-                <LoginControl />
-                <NameForm/>
-                <EssayForm/>
-                <FlavorFrom />
-                <Reservation />
+                    </form>
+                    <Clock />
+                    <Toggle />
+                    <LoginControl />
+                    <NameForm/>
+                    <EssayForm/>
+                    <FlavorFrom />
+                </div>
+                <div className="col-md-6">
+                    <Reservation />
+                    <Calculator />
+                </div>
+
             </div>
         );
     }
